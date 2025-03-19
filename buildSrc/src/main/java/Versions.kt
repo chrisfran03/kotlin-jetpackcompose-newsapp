@@ -1,0 +1,16 @@
+object Versions {
+    const val coreKtx = "1.9.0"
+    const val appcombat = "1.7.0"
+    const val lifecycleRuntimeKtx = "2.6.2"
+    const val activityCompose = "1.7.2"
+    const val composeBom = "2023.06.01"
+    const val composeUi = "1.5.1"
+    const val composeMaterial3 = "1.1.1"
+    const val junit = "4.13.2"
+    const val androidxJunit = "1.1.5"
+    const val espressoCore = "3.5.1"
+    const val material = "1.9.0"
+    const val hiltAndroid = "2.55"
+    const val hiltAndroidCompiler = "2.55"
+    const val hiltCompiler = "1.1.0"
+}
