@@ -31,6 +31,7 @@ object Dependencies {
  const val coroutinesCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
  const val coroutinesAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
 
+ val splashScreen = "androidx.core:core-splashscreen:${Versions.splashScreen}"
 }
 
 object Modules {

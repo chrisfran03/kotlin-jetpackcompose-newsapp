@@ -11,12 +11,14 @@ import com.example.newsinshort.ui.theme.NewsinShortTheme
 import com.example.newsinshort.ui.navigation.AppNavigationGraph
 import androidx.compose.material3.Surface
 import androidx.compose.ui.graphics.Color
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        installSplashScreen()
         setContent {
             NewsinShortTheme {
                  Surface (

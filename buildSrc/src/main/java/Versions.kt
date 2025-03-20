@@ -23,4 +23,5 @@ object Versions {
     const val loggingInterceptor = "4.12.0"
 
     const val coroutines = "1.8.1"
+    const val splashScreen = "1.0.1"
 }
