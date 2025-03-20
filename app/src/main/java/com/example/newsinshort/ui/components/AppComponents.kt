@@ -1,9 +1,11 @@
 package com.example.newsinshort.ui.components
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.wrapContentHeight
@@ -15,11 +17,16 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.loader.content.Loader
+import coil.compose.AsyncImage
+import com.example.newsinshort.R
 import com.example.newsinshort.data.entity.Article
 import com.example.newsinshort.data.entity.NewsResponse
 import com.example.newsinshort.ui.theme.Purple40
@@ -67,5 +74,41 @@ fun NormalTextComponent(textValue: String) {
 
 @Composable
 fun NewsRowComponent(page:Int, article:Article) {
-    NormalTextComponent(textValue = "$page \n\n ${article.title}")
+Column (
+    modifier = Modifier
+        .fillMaxSize()
+        .padding(8.dp)
+        .background(Color.White)
+){
+    AsyncImage(
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(240.dp),
+        model = article.urlToImage,
+        contentDescription = "",
+        contentScale = ContentScale.Fit,
+        placeholder = painterResource(id = R.drawable.placeholderimage),
+        error = painterResource(id = R.drawable.placeholderimage )
+
+    )
+
+    
+
+}
+}
+
+@Preview
+@Composable
+fun NewsRowComponentPreview(){
+    val article = Article(
+        author = "Author TEST",
+        title = "Title TEST",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+    )
+    NewsRowComponent(0, article )
 }
