@@ -28,8 +28,8 @@ object Dependencies {
  const val moshiConverter = "com.squareup.retrofit2:converter-moshi:${Versions.moshiConverter}"
  const val loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.loggingInterceptor}"
 
-
-
+ const val coroutinesCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
+ const val coroutinesAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
 
 }
 
