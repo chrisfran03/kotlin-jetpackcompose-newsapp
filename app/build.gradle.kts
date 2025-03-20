@@ -22,12 +22,18 @@ android {
     }
 
     buildTypes {
+        debug {
+            val apiKey: String = project.findProperty("API_KEY") as String? ?: ""
+            buildConfigField("String", "API_KEY", "\"$apiKey\"")
+        }
         release {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            val apiKey: String = project.findProperty("API_KEY") as String? ?: ""
+            buildConfigField("String", "API_KEY", "\"$apiKey\"")
         }
     }
     compileOptions {
@@ -38,6 +44,7 @@ android {
         jvmTarget = "17"
     }
     buildFeatures {
+        buildConfig = true
         compose = true
     }
 }
@@ -68,6 +75,12 @@ dependencies {
     kapt(Dependencies.hiltAndroidCompiler)
 
     implementation(Dependencies.hiltNavigationCompose)
+
+    implementation(Dependencies.retrofit)
+    implementation(Dependencies.okhttp)
+    implementation(Dependencies.moshi)
+    implementation(Dependencies.moshiConverter)
+    implementation(Dependencies.loggingInterceptor)
 }
 
 kapt {
