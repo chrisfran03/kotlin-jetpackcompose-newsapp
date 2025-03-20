@@ -13,4 +13,5 @@ object Versions {
     const val hiltAndroid = "2.55"
     const val hiltAndroidCompiler = "2.55"
     const val hiltCompiler = "1.1.0"
+    const val hiltNavigationCompose = "1.2.0"
 }

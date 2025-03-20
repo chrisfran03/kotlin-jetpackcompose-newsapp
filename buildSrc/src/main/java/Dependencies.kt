@@ -18,7 +18,7 @@ object Dependencies {
  const val hiltAndroid = "com.google.dagger:hilt-android:${Versions.hiltAndroid}"
  const val hiltAndroidCompiler = "com.google.dagger:hilt-android-compiler:${Versions.hiltAndroidCompiler}"
  const val hiltCompiler = "androidx.hilt:hilt-compiler:${Versions.hiltCompiler}"
-
+ const val hiltNavigationCompose = "androidx.hilt:hilt-navigation-compose:${Versions.hiltNavigationCompose}"
 }
 
 object Modules {
