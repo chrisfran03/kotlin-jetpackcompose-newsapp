@@ -13,6 +13,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.newsinshort.data.entity.NewsResponse
+import com.example.newsinshort.ui.components.EmptyStateComponent
 import com.example.newsinshort.ui.components.Loader
 import com.example.newsinshort.ui.components.NewsList
 import com.example.newsinshort.ui.components.NewsRowComponent
@@ -50,6 +51,8 @@ fun HomeScreen(
                     Log.d(TAG, "Inside_Success ${response.status} = ${response.totalResults}")
                     if(response.articles.isNotEmpty()) {
                         NewsRowComponent(page, response.articles[page])
+                    }else {
+                        EmptyStateComponent()
                     }
                 }
                 is ResourceState.Error -> {

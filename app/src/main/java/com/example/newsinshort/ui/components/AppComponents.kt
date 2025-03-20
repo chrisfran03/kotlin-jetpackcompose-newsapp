@@ -1,5 +1,6 @@
 package com.example.newsinshort.ui.components
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -157,4 +158,29 @@ fun AuthorDetailsComponent(authorName:String?, sourceName: String?) {
             Text(text = it)
         }
     }
+}
+
+@Composable
+fun EmptyStateComponent() {
+    Column(
+        modifier =Modifier
+            .fillMaxSize()
+            .padding(16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
+    ) {
+        Image(
+            painter = painterResource(id = R.drawable.nodata),
+            contentDescription = null
+        )
+
+        HeadingTextComponent(textValue = "No news as of now\n" +
+                "Please check in some time!")
+    }
+}
+
+@Preview
+@Composable
+fun EmptyStateComponentPreview() {
+    EmptyStateComponent()
 }
