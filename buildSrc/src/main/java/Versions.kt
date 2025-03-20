@@ -14,4 +14,11 @@ object Versions {
     const val hiltAndroidCompiler = "2.55"
     const val hiltCompiler = "1.1.0"
     const val hiltNavigationCompose = "1.2.0"
+
+    const val retrofit = "2.9.0"
+    const val okhttp = "4.12.0"
+    const val gsonConverter = "2.9.0"
+    const val moshi = "1.15.0"
+    const val moshiConverter = "2.9.0"
+    const val loggingInterceptor = "4.12.0"
 }

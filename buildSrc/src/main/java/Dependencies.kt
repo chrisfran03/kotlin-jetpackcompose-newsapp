@@ -15,10 +15,22 @@ object Dependencies {
  const val composeUiTooling = "androidx.compose.ui:ui-tooling:${Versions.composeUi}"
  const val composeUiTestManifest = "androidx.compose.ui:ui-test-manifest:${Versions.composeUi}"
  const val material = "com.google.android.material:material:${Versions.material}"
+
  const val hiltAndroid = "com.google.dagger:hilt-android:${Versions.hiltAndroid}"
  const val hiltAndroidCompiler = "com.google.dagger:hilt-android-compiler:${Versions.hiltAndroidCompiler}"
  const val hiltCompiler = "androidx.hilt:hilt-compiler:${Versions.hiltCompiler}"
  const val hiltNavigationCompose = "androidx.hilt:hilt-navigation-compose:${Versions.hiltNavigationCompose}"
+
+ const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
+ const val okhttp = "com.squareup.okhttp3:okhttp:${Versions.okhttp}"
+ const val gsonConverter = "com.squareup.retrofit2:converter-gson:${Versions.gsonConverter}"
+ const val moshi = "com.squareup.moshi:moshi-kotlin:${Versions.moshi}"
+ const val moshiConverter = "com.squareup.retrofit2:converter-moshi:${Versions.moshiConverter}"
+ const val loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.loggingInterceptor}"
+
+
+
+
 }
 
 object Modules {
